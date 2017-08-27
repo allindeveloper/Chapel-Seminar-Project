@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1553.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapelseminarproject.menuFXMLController">
+   <children>
+      <Pane layoutX="77.0" layoutY="58.0" prefHeight="641.0" prefWidth="1552.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="681.0" fitWidth="1539.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true">
+               <image>
+                  <Image url="@test_bg.jpg" />
+               </image>
+            </ImageView>
+            <TabPane prefHeight="609.0" prefWidth="1553.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Main Menu">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="303.0" layoutY="131.0" opacity="0.48" prefHeight="430.0" prefWidth="692.0" style="-fx-background-color: grey;" />
+                              <Label layoutX="320.0" layoutY="158.0" text="Matric Number" textFill="#0b3275">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="320.0" layoutY="223.0" text="Level" textFill="#0b3275">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="320.0" layoutY="289.0" prefHeight="45.0" prefWidth="203.0" text="Attendance" textFill="#0b3275">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="321.0" layoutY="348.0" text="Department" textFill="#0b3275">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="321.0" layoutY="415.0" text="Email" textFill="#0b3275">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_matric_num" layoutX="571.0" layoutY="160.0" prefHeight="42.0" prefWidth="392.0" />
+                              <TextField fx:id="txt_level" layoutX="571.0" layoutY="225.0" prefHeight="42.0" prefWidth="392.0" />
+                              <TextField fx:id="txt_attend" layoutX="571.0" layoutY="295.0" prefHeight="42.0" prefWidth="392.0" />
+                              <TextField fx:id="txt_depart" layoutX="571.0" layoutY="358.0" prefHeight="42.0" prefWidth="392.0" />
+                              <TextField fx:id="txt_email" layoutX="571.0" layoutY="418.0" prefHeight="42.0" prefWidth="392.0" />
+                              <Button fx:id="done" layoutX="837.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleDoneAction" prefHeight="44.0" prefWidth="125.0" text="Done" />
+                              <Button fx:id="calculate" layoutX="684.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleCalculateAction" prefHeight="44.0" prefWidth="125.0" text="Calculate" />
+                              <Label layoutX="452.0" layoutY="518.0" text="Grade:" textFill="#0b3275">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="322.0" layoutY="519.0" text="Score:" textFill="#0b3275">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="score_val" layoutX="382.0" layoutY="520.0" text="#" textFill="#0b3275">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="grade_val" layoutX="516.0" layoutY="520.0" text="#" textFill="#0b3275">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="528.0" layoutY="73.0" text="Student Details">
+                                 <font>
+                                    <Font name="System Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </content></Tab>
+                <Tab text="Report">
+                     <content>
+                        <TableView fx:id="DisplayTablereport" prefHeight="625.0" prefWidth="1553.0">
+                          <columns>
+                            <TableColumn fx:id="columnId" prefWidth="66.0" text="ID" />
+                              <TableColumn fx:id="columnMatric_number" prefWidth="138.0" text="Matric Number" />
+                              <TableColumn fx:id="columnAttendance" prefWidth="103.0" text="Attendance" />
+                              <TableColumn fx:id="columnDepartment1" prefWidth="268.0" text="Department" />
+                              <TableColumn fx:id="columnEmail" prefWidth="222.0" text="Email" />
+                              <TableColumn fx:id="columnGrade" prefWidth="108.0" text="Grade" />
+                              <TableColumn fx:id="columnScore" prefWidth="127.0" text="Score" />
+                              <TableColumn fx:id="columnLevel" prefWidth="85.0" text="Level" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <ComboBox fx:id="d" layoutX="810.0" layoutY="644.0" prefHeight="35.0" prefWidth="257.0" promptText="departments" />
+            <Button fx:id="sort" layoutX="602.0" layoutY="644.0" mnemonicParsing="false" onAction="#handleSortAction" prefHeight="35.0" prefWidth="104.0" text="Sort" />
+            <Button fx:id="refresh" layoutX="440.0" layoutY="644.0" mnemonicParsing="false" onAction="#handleRefreshAction" prefHeight="35.0" prefWidth="104.0" text="Refresh Report" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
